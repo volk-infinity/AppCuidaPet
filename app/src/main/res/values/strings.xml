@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CuidaPet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="inicio_icon_bottom_nav">Início</string>
+    <string name="categoria_icon_bottom_nav">Categorias</string>
+    <string name="carrinho_icon_bottom_nav">Carrinho</string>
+    <string name="favoritos_icon_bottom_nav">Favoritos</string>
+    <string name="mais_icon_bottom_nav">Mais</string>
+</resources>

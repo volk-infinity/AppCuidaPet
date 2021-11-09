@@ -1,0 +1,55 @@
+package com.example.appcuidapet.activity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import com.example.appcuidapet.R;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+public class DetalhesProdutoActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detalhes_produto);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_detalhes_produto, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.mnFavoritar :
+                Toast.makeText(
+                        this,
+                        "Adicionado aos favoritos",
+                        Toast.LENGTH_LONG).show();
+                break;
+            case R.id.mnCarrinho:
+                Toast.makeText(
+                        this,
+                        "Adicionado ao carrinho",
+                        Toast.LENGTH_LONG).show();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+

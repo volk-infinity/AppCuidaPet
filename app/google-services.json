@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "890660353473",
+    "firebase_url": "https://bdcuidapet-default-rtdb.firebaseio.com",
+    "project_id": "bdcuidapet",
+    "storage_bucket": "bdcuidapet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890660353473:android:c1ec0d1d200e49cb26ab40",
+        "android_client_info": {
+          "package_name": "com.example.appcuidapet.activity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890660353473-evhnsbbcsugn4oo8k7ciapmqus0jph4t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appcuidapet.activity",
+            "certificate_hash": "cf57bab44cecf9d0389875e89bf6939ceacede5d"
+          }
+        },
+        {
+          "client_id": "890660353473-bke2hlchvh6f6lm2f8h4khlu2f8an5v0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0J-_hNU63F8psVl-Q_I9_eQ2ItvQx55E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890660353473-bke2hlchvh6f6lm2f8h4khlu2f8an5v0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

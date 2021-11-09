@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Minhas cores -->
+    <color name="colorPrimary">#c71364</color>
+    <color name="colorPrimaryDark">#720e2a</color>
+    <color name="colorAccent">#c71364</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorSplash">#cccacb</color>
+    <color name="colorStar">#FFBE3C</color>
+    <color name="colorGray">#DCDCDC</color>
+
+</resources>
