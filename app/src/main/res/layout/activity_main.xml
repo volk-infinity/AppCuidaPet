@@ -15,7 +15,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="260dp"
-            android:layout_marginTop="360dp"
+            android:layout_marginTop="345dp"
             android:orientation="horizontal"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,7 @@
                         android:id="@+id/imageCoracao1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginLeft="150dp"
+                        android:layout_marginLeft="140dp"
                         android:layout_marginTop="185dp"
                         app:srcCompat="@drawable/ic_favorite_on" />
                 </RelativeLayout>
@@ -106,7 +106,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="10dp"
             android:layout_marginTop="325dp"/>
 
         <TextView
