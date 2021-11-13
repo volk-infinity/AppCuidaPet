@@ -2,10 +2,12 @@ package com.example.appcuidapet.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.appcuidapet.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,14 +17,27 @@ import org.jetbrains.annotations.NotNull;
 public class CategoriaGatosActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    CardView AlimentGato,AcessoGato,HigieneGato;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categoria_gatos);
 
+        AlimentGato = findViewById(R.id.AlimentGato);
+        AcessoGato = findViewById(R.id.AcessoGato);
+        HigieneGato = findViewById(R.id.HigieneGato);
+
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_category);
+
+
+        AlimentGato();
+        AcessoGato();
+        HigieneGato();
+
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -61,6 +76,37 @@ public class CategoriaGatosActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void AlimentGato() {
+        AlimentGato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AlimentacaoGatoActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void AcessoGato() {
+        AcessoGato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AcessoriosGatoActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
+    private void HigieneGato() {
+        HigieneGato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HigieneGatoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

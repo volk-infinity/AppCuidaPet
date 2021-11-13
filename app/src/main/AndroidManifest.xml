@@ -11,12 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCuidaPet">
-        <activity android:name=".activity.HigieneGatoActivity"></activity>
-        <activity android:name=".activity.AcessoriosGatoActivity" />
-        <activity android:name=".activity.AlimentacaoGatoActivity" />
-        <activity android:name=".activity.HigieneDogActivity" />
-        <activity android:name=".activity.AcessoriosDogActivity" />
-        <activity android:name=".activity.AlimentacaoDogActivity" />
+        <activity android:name=".activity.HigieneGatoActivity"
+        android:label="Higiene Gatos" />
+        <activity android:name=".activity.AcessoriosGatoActivity"
+            android:label="Acessórios Gatos" />
+        <activity android:name=".activity.AlimentacaoGatoActivity"
+            android:label="Alimentação Gatos" />
+        <activity android:name=".activity.HigieneDogActivity"
+            android:label="Higiene Cachorros" />
+        <activity android:name=".activity.AcessoriosDogActivity"
+            android:label="Acessórios Cachorros" />
+        <activity android:name=".activity.AlimentacaoDogActivity"
+            android:label="Alimentação Cachorros" />
         <activity
             android:name=".activity.LocalizacaoActivity"
             android:label="Localização" />
