@@ -2,10 +2,12 @@ package com.example.appcuidapet.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.appcuidapet.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,6 +17,7 @@ import org.jetbrains.annotations.NotNull;
 public class CategoriaCachorrosActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    CardView AlimentDog,AcessoDog,HigieneDog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,12 @@ public class CategoriaCachorrosActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_category);
+
+
+        AlimentDog();
+        AcessoDog();
+        HigieneDog();
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -61,6 +70,37 @@ public class CategoriaCachorrosActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void AlimentDog() {
+        AlimentDog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AlimentacaoDogActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void AcessoDog() {
+        AcessoDog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AcessoriosDogActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
+    private void HigieneDog() {
+        HigieneDog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HigieneDogActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
