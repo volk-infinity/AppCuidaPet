@@ -63,4 +63,14 @@ public class HigieneGatoActivity extends AppCompatActivity {
             }
         });
     }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(menuItem);
+    }
 }
