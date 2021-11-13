@@ -21,6 +21,8 @@ public class AcessoriosGatoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acessorios_gato);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_category);
 

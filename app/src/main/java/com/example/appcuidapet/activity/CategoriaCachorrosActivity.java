@@ -24,6 +24,8 @@ public class CategoriaCachorrosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categoria_cachorros);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         AlimentDog = findViewById(R.id.AlimentDog);
         AcessoDog = findViewById(R.id.AcessoDog);
         HigieneDog = findViewById(R.id.HigieneDog);
@@ -105,6 +107,16 @@ public class CategoriaCachorrosActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 
 }

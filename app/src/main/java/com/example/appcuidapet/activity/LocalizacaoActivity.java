@@ -23,6 +23,8 @@ public class LocalizacaoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_localizacao);
 
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_mais);
 
@@ -62,8 +64,17 @@ public class LocalizacaoActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
     }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(menuItem);
+    }
+
 
 }

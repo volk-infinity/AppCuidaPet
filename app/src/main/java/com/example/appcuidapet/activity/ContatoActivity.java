@@ -21,6 +21,8 @@ public class ContatoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_mais);
 
@@ -62,7 +64,16 @@ public class ContatoActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
 
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 
 }

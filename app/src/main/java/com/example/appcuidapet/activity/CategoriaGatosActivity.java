@@ -24,6 +24,8 @@ public class CategoriaGatosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categoria_gatos);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         AlimentGato = findViewById(R.id.AlimentGato);
         AcessoGato = findViewById(R.id.AcessoGato);
         HigieneGato = findViewById(R.id.HigieneGato);
@@ -107,6 +109,16 @@ public class CategoriaGatosActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 
 }
