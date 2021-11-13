@@ -9,12 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.appcuidapet.R;
+import com.example.appcuidapet.activity.AlimentacaoDogActivity;
 import com.example.appcuidapet.activity.MainActivity;
 import com.example.appcuidapet.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +37,7 @@ public class RegisterFragment extends Fragment {
     String email, senha;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,9 +51,12 @@ public class RegisterFragment extends Fragment {
         email = varEmail.getText().toString();
         senha = varSenha.getText().toString();
 
+
        return view;
 
     }
+
+
 
 }
 

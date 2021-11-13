@@ -10,12 +10,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.appcuidapet.R;
+import com.example.appcuidapet.activity.ContatoActivity;
 import com.example.appcuidapet.activity.MainActivity;
-import com.google.android.gms.tasks.OnCompleteListener;
+import com.example.appcuidapet.activity.ResetPasswordActivity;
 import com.google.android.material.textfield.TextInputEditText;
 
 
@@ -32,6 +32,7 @@ public class LogFragment extends Fragment {
     private TextInputEditText varEmail, varSenha;
     private String email, senha;
     private Button btnEntrar;
+    TextView txtEsqueciSenha;
 
 
     @Override
@@ -42,8 +43,11 @@ public class LogFragment extends Fragment {
 
         varEmail = view.findViewById(R.id.txtEmailLog);
         varSenha = view.findViewById(R.id.txtSenhaLog);
+        txtEsqueciSenha = view.findViewById(R.id.txtEsqueciSenha);
         email = varEmail.getText().toString();
         senha = varSenha.getText().toString();
+
+        txtEsqueciSenha();
 
 
         btnEntrar = view.findViewById(R.id.btnEntrar);
@@ -55,6 +59,18 @@ public class LogFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void txtEsqueciSenha() {
+
+        txtEsqueciSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext().getApplicationContext(), ResetPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -72,6 +88,12 @@ public class LogFragment extends Fragment {
             startActivity(intent);
         }
     }
+
+
+
+
+
+
 }
 
 
