@@ -1,42 +1,41 @@
 {
   "project_info": {
-    "project_number": "890660353473",
-    "firebase_url": "https://bdcuidapet-default-rtdb.firebaseio.com",
-    "project_id": "bdcuidapet",
-    "storage_bucket": "bdcuidapet.appspot.com"
+    "project_number": "75222864009",
+    "project_id": "bdcuidapet2",
+    "storage_bucket": "bdcuidapet2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:890660353473:android:c1ec0d1d200e49cb26ab40",
+        "mobilesdk_app_id": "1:75222864009:android:3f008f011db8562379b658",
         "android_client_info": {
-          "package_name": "com.example.appcuidapet.activity"
+          "package_name": "com.example.appcuidapet"
         }
       },
       "oauth_client": [
         {
-          "client_id": "890660353473-evhnsbbcsugn4oo8k7ciapmqus0jph4t.apps.googleusercontent.com",
+          "client_id": "75222864009-i9j293olftuhpn2gc84lvlhv76qa09mp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.appcuidapet.activity",
+            "package_name": "com.example.appcuidapet",
             "certificate_hash": "cf57bab44cecf9d0389875e89bf6939ceacede5d"
           }
         },
         {
-          "client_id": "890660353473-bke2hlchvh6f6lm2f8h4khlu2f8an5v0.apps.googleusercontent.com",
+          "client_id": "75222864009-ct1sosig8hgh9os7erm4o76ksqhriqu6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC0J-_hNU63F8psVl-Q_I9_eQ2ItvQx55E"
+          "current_key": "AIzaSyCYly6nWSsM7U5XzDrJB2LhMwHN52xSeZ0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "890660353473-bke2hlchvh6f6lm2f8h4khlu2f8an5v0.apps.googleusercontent.com",
+              "client_id": "75222864009-ct1sosig8hgh9os7erm4o76ksqhriqu6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

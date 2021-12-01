@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 public class MaisActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    CardView contato,localizacao;
+    CardView contato,localizacao,statusPedidos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +26,15 @@ public class MaisActivity extends AppCompatActivity {
 
         contato = findViewById(R.id.contato);
         localizacao = findViewById(R.id.localizacao);
+        statusPedidos = findViewById(R.id.statusPedidos);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_mais);
 
 
-
         contato();
         localizacao();
-
+        statusPedidos();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -90,6 +90,16 @@ public class MaisActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), LocalizacaoActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void statusPedidos() {
+        statusPedidos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MeusPedidosActivity.class);
                 startActivity(intent);
             }
         });

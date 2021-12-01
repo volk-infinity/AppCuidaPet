@@ -1,5 +1,8 @@
 package com.example.appcuidapet.model;
 
+import com.example.appcuidapet.fragment.ConfigFirebase;
+import com.google.firebase.database.DatabaseReference;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,6 +53,11 @@ public class Usuario {
     @Override
     public String toString(){ return nome;}
 
+
+    public void salvar() {
+        DatabaseReference firebaseRef = ConfigFirebase.getFirebaseDatabase();
+        DatabaseReference usuario = firebaseRef.child("usuarios").child(getIdUsuario());
+    }
 }
 
 
