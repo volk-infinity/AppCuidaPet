@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCuidaPet">
-        <activity android:name=".activity.MeusPedidosActivity"
+        <activity android:name=".activity.FormasPagamentoActivity"
+            android:label="Formas de pagamento" />
+        <activity
+            android:name=".activity.MeusPedidosActivity"
             android:label="Meus Pedidos" />
         <activity
             android:name=".activity.ResetPasswordActivity"

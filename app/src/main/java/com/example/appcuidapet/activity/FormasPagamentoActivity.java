@@ -14,24 +14,23 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
-public class CarrinhoActivity extends AppCompatActivity {
+
+public class FormasPagamentoActivity extends AppCompatActivity {
+
 
     BottomNavigationView bottomNavigationView;
-    Button btnFinalizarCompra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carrinho);
+        setContentView(R.layout.activity_formas_pagamento);
 
-
-        btnFinalizarCompra = findViewById(R.id.btnFinalizarCompra);
-
-        btnFinalizarCompra();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_buy);
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -40,14 +39,14 @@ public class CarrinhoActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.ic_home:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
 
                         return true;
 
                     case R.id.ic_category:
-                        startActivity(new Intent(getApplicationContext(),CategoriaActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), CategoriaActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ic_buy:
@@ -55,13 +54,13 @@ public class CarrinhoActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.ic_favoritos:
-                        startActivity(new Intent(getApplicationContext(),FavoritosActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), FavoritosActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ic_mais:
-                        startActivity(new Intent(getApplicationContext(),MaisActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), MaisActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
                 }
 
@@ -71,14 +70,15 @@ public class CarrinhoActivity extends AppCompatActivity {
 
     }
 
-    private void btnFinalizarCompra() {
-        btnFinalizarCompra.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), FormasPagamentoActivity.class);
-                startActivity(intent);
-            }
-        });
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
+
 
 }

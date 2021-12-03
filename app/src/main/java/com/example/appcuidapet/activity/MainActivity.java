@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -27,11 +28,17 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    ImageView imgHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        imgHome = findViewById(R.id.imgHome);
+
+        imgHome();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -71,6 +78,16 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 return false;
+            }
+        });
+    }
+
+    private void imgHome() {
+        imgHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CategoriaActivity.class);
+                startActivity(intent);
             }
         });
     }
