@@ -28,39 +28,53 @@ public class MeusPedidosActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.ic_mais);
 
 
-    bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
 
 
-            switch (item.getItemId()) {
-                case R.id.ic_home:
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
+                switch (item.getItemId()) {
+                    case R.id.ic_home:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
 
-                case R.id.ic_category:
+                    case R.id.ic_category:
+                        startActivity(new Intent(getApplicationContext(), CategoriaActivity.class));
+                        overridePendingTransition(0, 0);
 
-                    return true;
+                        return true;
 
-                case R.id.ic_buy:
-                    startActivity(new Intent(getApplicationContext(), CarrinhoActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
+                    case R.id.ic_buy:
+                        startActivity(new Intent(getApplicationContext(), CarrinhoActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
 
-                case R.id.ic_favoritos:
-                    startActivity(new Intent(getApplicationContext(), FavoritosActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
+                    case R.id.ic_favoritos:
+                        startActivity(new Intent(getApplicationContext(), FavoritosActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
 
-                case R.id.ic_mais:
-                    startActivity(new Intent(getApplicationContext(), MaisActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
+                    case R.id.ic_mais:
 
+                        return true;
+
+                }
+
+                return false;
             }
+        });
 
-            return false;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
         }
-    });
-}}
+        return super.onOptionsItemSelected(menuItem);
+    }
+
+}
