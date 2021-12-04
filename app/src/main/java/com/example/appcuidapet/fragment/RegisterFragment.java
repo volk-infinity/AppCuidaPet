@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.appcuidapet.R;
 import com.example.appcuidapet.activity.MainActivity;
+import com.example.appcuidapet.config.ConfigFirebase;
 import com.example.appcuidapet.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,8 +25,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
-
-import org.jetbrains.annotations.NotNull;
 
 
 /**

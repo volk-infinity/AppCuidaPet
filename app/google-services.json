@@ -1,20 +1,21 @@
 {
   "project_info": {
     "project_number": "75222864009",
+    "firebase_url": "https://bdcuidapet2-default-rtdb.firebaseio.com",
     "project_id": "bdcuidapet2",
     "storage_bucket": "bdcuidapet2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:75222864009:android:3f008f011db8562379b658",
+        "mobilesdk_app_id": "1:75222864009:android:f64756d8d60327f379b658",
         "android_client_info": {
           "package_name": "com.example.appcuidapet"
         }
       },
       "oauth_client": [
         {
-          "client_id": "75222864009-i9j293olftuhpn2gc84lvlhv76qa09mp.apps.googleusercontent.com",
+          "client_id": "75222864009-rrd9am9shfb1gtkfok7an7dn4p1dv3gl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.appcuidapet",

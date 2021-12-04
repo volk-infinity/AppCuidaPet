@@ -1,10 +1,15 @@
 package com.example.appcuidapet.model;
 
-import com.example.appcuidapet.fragment.ConfigFirebase;
+import com.example.appcuidapet.config.ConfigFirebase;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
 
 import java.util.HashMap;
 import java.util.Map;
+import com.example.appcuidapet.helper.UsuarioFirebase;
+import com.google.firebase.database.FirebaseDatabase;
+
+
 
 public class Usuario {
     private String idUsuario;
@@ -16,6 +21,7 @@ public class Usuario {
 
     }
 
+    @Exclude
     public String getIdUsuario() {
         return idUsuario;
     }
@@ -40,6 +46,8 @@ public class Usuario {
         this.email = email;
     }
 
+
+    @Exclude
     public String getSenha() {
         return senha;
     }
@@ -48,15 +56,25 @@ public class Usuario {
         this.senha = senha;
     }
 
-    // alterar o medoto tostring para no final trazer o nome
 
-    @Override
-    public String toString(){ return nome;}
+
+    @Exclude
+    public Map<String, Object> converterParaMap(){
+        HashMap<String, Object> usuarioMap = new HashMap<>();
+
+        usuarioMap.put("email",getEmail());
+        usuarioMap.put("nome", getNome());
+        usuarioMap.put("senha",getSenha());
+
+        return usuarioMap;
+    }
 
 
     public void salvar() {
         DatabaseReference firebaseRef = ConfigFirebase.getFirebaseDatabase();
         DatabaseReference usuario = firebaseRef.child("usuarios").child(getIdUsuario());
+
+        usuario.setValue(this);
     }
 }
 

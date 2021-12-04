@@ -10,13 +10,22 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.appcuidapet.R;
-import com.example.appcuidapet.activity.ContatoActivity;
 import com.example.appcuidapet.activity.MainActivity;
 import com.example.appcuidapet.activity.ResetPasswordActivity;
+import com.example.appcuidapet.config.ConfigFirebase;
+import com.example.appcuidapet.model.Usuario;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 
 /**
@@ -33,6 +42,7 @@ public class LogFragment extends Fragment {
     private String email, senha;
     private Button btnEntrar;
     TextView txtEsqueciSenha;
+    private FirebaseAuth auth;
 
 
     @Override
@@ -46,6 +56,7 @@ public class LogFragment extends Fragment {
         txtEsqueciSenha = view.findViewById(R.id.txtEsqueciSenha);
         email = varEmail.getText().toString();
         senha = varSenha.getText().toString();
+        auth = ConfigFirebase.getFirebaseAuth();
 
         txtEsqueciSenha();
 
@@ -53,8 +64,7 @@ public class LogFragment extends Fragment {
         btnEntrar = view.findViewById(R.id.btnEntrar);
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                validationLogUser(email, senha);
+            public void onClick(View v) { validationLogUser(email, senha);
             }
         });
 
@@ -83,13 +93,69 @@ public class LogFragment extends Fragment {
             Toast.makeText(getActivity(),
                     "Preencha TODOS os campos!",
                     Toast.LENGTH_LONG).show();
-            getActivity().finish();
-            Intent intent = new Intent(getContext().getApplicationContext(), MainActivity.class);
-            startActivity(intent);
+
         }
+        else {
+            if (!txtEmail.isEmpty()){
+                if (!txtSenha.isEmpty()){
+                    Usuario usuario = new Usuario();
+                    usuario.setEmail(txtEmail);
+                    usuario.setSenha(txtSenha);
+
+                    logUser(usuario);
+
+                } else {
+                    Toast.makeText(getActivity(),
+                            "Senha não preenchida!",
+                            Toast.LENGTH_LONG).show();
+                }
+            } else {
+                Toast.makeText(getActivity(),
+                        "E-mail não preenchido!",
+                        Toast.LENGTH_LONG).show();
+            }
+        }
+
     }
 
 
+    public void logUser(Usuario usuario){
+        auth.signInWithEmailAndPassword(
+                usuario.getEmail(),
+                usuario.getSenha()
+        ).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>(){
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                if(task.isSuccessful()){
+                    Toast.makeText(getActivity(),
+                            "Sucesso ao logar!",
+                            Toast.LENGTH_LONG).show();
+                    getActivity().finish();
+                    Intent intent = new Intent(getContext().getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                }
+                else{
+                    String excecao = "";
+                    try{
+                        throw task.getException();
+                    }catch (FirebaseAuthInvalidUserException e){
+                        excecao ="Usuário não está cadastrado";
+                    }catch (FirebaseAuthInvalidCredentialsException e){
+                        excecao = "Senha não corresponde ao usuário cadastrado";
+                    }catch (FirebaseAuthUserCollisionException e){
+                        excecao = "Essa conta já foi cadastrada";
+                    }catch (Exception e){
+                        excecao = "Erro ao logar usuário: " + e.getMessage();
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(getActivity(),
+                            excecao,
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
 
 
 
