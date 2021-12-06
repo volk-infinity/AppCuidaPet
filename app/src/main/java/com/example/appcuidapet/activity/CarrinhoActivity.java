@@ -2,22 +2,35 @@ package com.example.appcuidapet.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.appcuidapet.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
+import org.w3c.dom.Text;
+
 
 public class CarrinhoActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    Button btnFinalizarCompra;
+    private Button btnFinalizarCompra;
+    private ImageButton SomaButton, DiminuiButton;
+    private TextView TextViewQtde, subTotalText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +39,15 @@ public class CarrinhoActivity extends AppCompatActivity {
 
 
         btnFinalizarCompra = findViewById(R.id.btnFinalizarCompra);
+        SomaButton = findViewById(R.id.SomaButton);
+        DiminuiButton = findViewById(R.id.DiminuiButton);
+        TextViewQtde =  findViewById(R.id.TextViewQtde);
+        subTotalText = findViewById(R.id.subTotalText);
+
 
         btnFinalizarCompra();
+        SomaButton();
+        DiminuiButton();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -40,14 +60,14 @@ public class CarrinhoActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.ic_home:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
 
                         return true;
 
                     case R.id.ic_category:
-                        startActivity(new Intent(getApplicationContext(),CategoriaActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), CategoriaActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ic_buy:
@@ -55,13 +75,13 @@ public class CarrinhoActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.ic_favoritos:
-                        startActivity(new Intent(getApplicationContext(),FavoritosActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), FavoritosActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ic_mais:
-                        startActivity(new Intent(getApplicationContext(),MaisActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), MaisActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
                 }
 
@@ -70,6 +90,48 @@ public class CarrinhoActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+    private void DiminuiButton() {
+        DiminuiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Double valorUnitario = 120.00;
+                Double subTotal = Double.parseDouble(subTotalText.getText().toString());
+                Integer qtde =  Integer.parseInt(TextViewQtde.getText().toString());
+                qtde -= 1;
+
+                if(qtde>=1){
+                    String subtotal = String.valueOf(subTotal-valorUnitario);
+                    subTotalText.setText(subtotal.toString());
+                    TextViewQtde.setText(qtde.toString());
+                } else {
+                    Toast.makeText(getApplicationContext(), "Valor mínimo de itens no carrinho", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private void SomaButton() {
+        SomaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Double valorUnitario = 120.00;
+                Double subTotal = Double.parseDouble(subTotalText.getText().toString());
+                Integer qtde =  Integer.parseInt(TextViewQtde.getText().toString());
+                qtde += 1;
+
+                if(qtde>=1){
+                    String subtotal = String.valueOf(qtde * valorUnitario);
+                    subTotalText.setText(subtotal);
+                    TextViewQtde.setText(qtde.toString());
+                }
+            }
+        });
+       return;
+    }
+
 
     private void btnFinalizarCompra() {
         btnFinalizarCompra.setOnClickListener(new View.OnClickListener() {
@@ -80,5 +142,5 @@ public class CarrinhoActivity extends AppCompatActivity {
             }
         });
     }
-
 }
+
