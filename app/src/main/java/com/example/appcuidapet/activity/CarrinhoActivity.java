@@ -23,13 +23,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.Text;
 
+import java.util.List;
+
 
 public class CarrinhoActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     private Button btnFinalizarCompra;
     private ImageButton SomaButton, DiminuiButton;
-    private TextView TextViewQtde, subTotalText;
+    private TextView TextViewQtde, subTotalText, TextViewTotalPedido;
 
 
     @Override
@@ -43,11 +45,13 @@ public class CarrinhoActivity extends AppCompatActivity {
         DiminuiButton = findViewById(R.id.DiminuiButton);
         TextViewQtde =  findViewById(R.id.TextViewQtde);
         subTotalText = findViewById(R.id.subTotalText);
+        TextViewTotalPedido = findViewById(R.id.TextViewTotalPedido);
 
 
         btnFinalizarCompra();
         SomaButton();
         DiminuiButton();
+        TextViewTotalPedido();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -92,12 +96,11 @@ public class CarrinhoActivity extends AppCompatActivity {
     }
 
 
-
     private void DiminuiButton() {
         DiminuiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double valorUnitario = 120.00;
+                Double valorUnitario = 120.0;
                 Double subTotal = Double.parseDouble(subTotalText.getText().toString());
                 Integer qtde =  Integer.parseInt(TextViewQtde.getText().toString());
                 qtde -= 1;
@@ -117,7 +120,7 @@ public class CarrinhoActivity extends AppCompatActivity {
         SomaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double valorUnitario = 120.00;
+                Double valorUnitario = 120.0;
                 Double subTotal = Double.parseDouble(subTotalText.getText().toString());
                 Integer qtde =  Integer.parseInt(TextViewQtde.getText().toString());
                 qtde += 1;
@@ -142,5 +145,27 @@ public class CarrinhoActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    private void TextViewTotalPedido() {
+        TextViewTotalPedido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Double valorUnitario = 120.0;
+                Integer qtde =  Integer.parseInt(TextViewQtde.getText().toString());
+                qtde += 1;
+
+                if(qtde>=1){
+                    String subtotal = String.valueOf(qtde * valorUnitario);
+                    subTotalText.setText(subtotal);
+                    TextViewQtde.setText(qtde.toString());
+                }
+            }
+        });
+
+        return;
+    }
+
 }
 
