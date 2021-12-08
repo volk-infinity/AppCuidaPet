@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCuidaPet">
-        <activity android:name=".activity.FormasPagamentoActivity"
+        <activity android:name=".activity.PagamentoCreditoActivity"></activity>
+        <activity
+            android:name=".activity.FormasPagamentoActivity"
             android:label="Formas de pagamento" />
         <activity
             android:name=".activity.MeusPedidosActivity"

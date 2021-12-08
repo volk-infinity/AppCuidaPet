@@ -152,20 +152,7 @@ public class CarrinhoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Double valorUnitario = 120.0;
-                Integer qtde =  Integer.parseInt(TextViewQtde.getText().toString());
-                qtde += 1;
-
-                if(qtde>=1){
-                    String subtotal = String.valueOf(qtde * valorUnitario);
-                    subTotalText.setText(subtotal);
-                    TextViewQtde.setText(qtde.toString());
-                }
             }
         });
-
-        return;
     }
-
 }
-
