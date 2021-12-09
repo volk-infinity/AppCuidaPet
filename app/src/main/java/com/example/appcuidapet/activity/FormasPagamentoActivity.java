@@ -2,6 +2,7 @@ package com.example.appcuidapet.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ public class FormasPagamentoActivity extends AppCompatActivity {
 
 
     BottomNavigationView bottomNavigationView;
+    CardView PagamentoCredito;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +30,12 @@ public class FormasPagamentoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+        PagamentoCredito = findViewById(R.id.PagamentoCredito);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_buy);
+
+
+        PagamentoCredito();
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -70,6 +76,17 @@ public class FormasPagamentoActivity extends AppCompatActivity {
 
     }
 
+    private void PagamentoCredito() {
+
+        PagamentoCredito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PagamentoCreditoActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
     public boolean onOptionsItemSelected(MenuItem menuItem){
 
         switch (menuItem.getItemId()){
@@ -79,6 +96,5 @@ public class FormasPagamentoActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(menuItem);
     }
-
 
 }
