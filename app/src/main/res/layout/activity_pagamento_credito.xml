@@ -12,8 +12,8 @@
         android:layout_height="match_parent" >
 
         <LinearLayout
-            android:layout_width="411dp"
-            android:layout_height="140dp"
+            android:layout_width="410dp"
+            android:layout_height="111dp"
             android:layout_marginTop="36dp"
             android:orientation="horizontal"
             android:padding="10dp"
@@ -23,8 +23,8 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="131dp"
-                android:layout_height="105dp"
+                android:layout_width="125dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1">
 
@@ -32,12 +32,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textViewCartao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Número:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="106dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1">
 
@@ -45,14 +55,63 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textViewBandeira"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Bandeira:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="411dp"
-            android:layout_height="146dp"
-            android:layout_marginTop="176dp"
+            android:layout_height="102dp"
+            android:layout_marginTop="144dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewNomeCartao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Nome (como está no cartão):"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="412dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="244dp"
             android:orientation="horizontal"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,13 +121,24 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="113dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="114dp">
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewCpf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="CPF do proprietário do cartão:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -76,40 +146,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="411dp"
-            android:layout_height="146dp"
-            android:layout_marginTop="320dp"
+            android:layout_width="410dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="352dp"
             android:orientation="horizontal"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="113dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="114dp">
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="411dp"
-            android:layout_height="140dp"
-            android:layout_marginTop="464dp"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -120,8 +163,19 @@
                 android:layout_weight="1">
 
                 <RelativeLayout
-                    android:layout_width="93dp"
-                    android:layout_height="73dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewMes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Data de Validade:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -133,24 +187,22 @@
                 android:layout_weight="1">
 
                 <RelativeLayout
-                    android:layout_width="93dp"
-                    android:layout_height="73dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewAno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="CVV:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
-            </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="20dp"
-                android:layout_height="80dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1">
-
-                <RelativeLayout
-                    android:layout_width="93dp"
-                    android:layout_height="73dp">
-
-                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
 
@@ -159,7 +211,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
