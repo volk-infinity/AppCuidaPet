@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.MenuItemCompat;
 
 import com.example.appcuidapet.R;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     ImageView imgHome;
+    CardView produto1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         imgHome = findViewById(R.id.imgHome);
+        produto1 = findViewById(R.id.produto1);
 
         imgHome();
+        produto1();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -82,11 +86,35 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //config botao pesquisa
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+
+        MenuItem item = menu.findItem(R.id.mnPesquisar);
+
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
     private void imgHome() {
         imgHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CategoriaActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void produto1() {
+        produto1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DetalhesProdutoActivity.class);
                 startActivity(intent);
             }
         });
