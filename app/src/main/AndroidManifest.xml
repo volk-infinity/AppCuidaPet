@@ -65,7 +65,8 @@
             android:name=".activity.FavoritosActivity"
             android:label="Favoritos" />
         <activity android:name=".activity.ContaActivity" />
-        <activity android:name=".activity.DetalhesProdutoActivity" />
+        <activity android:name=".activity.DetalhesProdutoActivity"
+            android:label="Detalhes Produto" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.SplashActivity">
             <intent-filter>

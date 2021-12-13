@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.text.NumberFormat;
 
 import com.example.appcuidapet.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -43,15 +44,15 @@ public class CarrinhoActivity extends AppCompatActivity {
         btnFinalizarCompra = findViewById(R.id.btnFinalizarCompra);
         SomaButton = findViewById(R.id.SomaButton);
         DiminuiButton = findViewById(R.id.DiminuiButton);
-        TextViewQtde =  findViewById(R.id.TextViewQtde);
+        TextViewQtde = findViewById(R.id.TextViewQtde);
         subTotalText = findViewById(R.id.subTotalText);
         TextViewTotalPedido = findViewById(R.id.TextViewTotalPedido);
 
 
         btnFinalizarCompra();
+        TextViewTotalPedido();
         SomaButton();
         DiminuiButton();
-        TextViewTotalPedido();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -95,14 +96,13 @@ public class CarrinhoActivity extends AppCompatActivity {
 
     }
 
-
     private void DiminuiButton() {
         DiminuiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double valorUnitario = 120.0;
-                Double subTotal = Double.parseDouble(subTotalText.getText().toString());
-                Integer qtde =  Integer.parseInt(TextViewQtde.getText().toString());
+                int valorUnitario = 120;
+                int subTotal = Integer.parseInt(subTotalText.getText().toString());
+                Integer qtde = Integer.parseInt(TextViewQtde.getText().toString());
                 qtde -= 1;
 
                 if(qtde>=1){
@@ -116,13 +116,14 @@ public class CarrinhoActivity extends AppCompatActivity {
         });
     }
 
+
     private void SomaButton() {
         SomaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double valorUnitario = 120.0;
-                Double subTotal = Double.parseDouble(subTotalText.getText().toString());
-                Integer qtde =  Integer.parseInt(TextViewQtde.getText().toString());
+                int valorUnitario = 120;
+                int subTotal = Integer.parseInt(subTotalText.getText().toString());
+                Integer qtde = Integer.parseInt(TextViewQtde.getText().toString());
                 qtde += 1;
 
                 if(qtde>=1){
@@ -132,7 +133,7 @@ public class CarrinhoActivity extends AppCompatActivity {
                 }
             }
         });
-       return;
+        return;
     }
 
 

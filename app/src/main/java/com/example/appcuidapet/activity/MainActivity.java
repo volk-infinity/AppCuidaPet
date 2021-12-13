@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,8 +30,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    ImageView imgHome;
-    CardView produto1;
+    ImageView imgHome,imgProduto1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         imgHome = findViewById(R.id.imgHome);
-        produto1 = findViewById(R.id.produto1);
+        imgProduto1 = findViewById(R.id.imgProduto1);
 
         imgHome();
-        produto1();
+        imgProduto1();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -110,8 +111,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void produto1() {
-        produto1.setOnClickListener(new View.OnClickListener() {
+    private void imgProduto1() {
+        imgProduto1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), DetalhesProdutoActivity.class);
