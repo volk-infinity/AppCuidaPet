@@ -3,9 +3,13 @@ package com.example.appcuidapet.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.appcuidapet.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,6 +20,7 @@ public class PagamentoCreditoActivity extends AppCompatActivity {
 
 
     BottomNavigationView bottomNavigationView;
+    private Button btnFinalizarCompra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,11 @@ public class PagamentoCreditoActivity extends AppCompatActivity {
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        btnFinalizarCompra = findViewById(R.id.btnFinalizarCompra);
+
+        btnFinalizarCompra();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.ic_buy);
@@ -36,22 +46,22 @@ public class PagamentoCreditoActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.ic_home:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
 
                         return true;
 
                     case R.id.ic_category:
-                        startActivity(new Intent(getApplicationContext(),CategoriaActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), CategoriaActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ic_buy:
                         return true;
 
                     case R.id.ic_favoritos:
-                        startActivity(new Intent(getApplicationContext(),FavoritosActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), FavoritosActivity.class));
+                        overridePendingTransition(0, 0);
 
                         return true;
 
@@ -66,6 +76,17 @@ public class PagamentoCreditoActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void btnFinalizarCompra() {
+        btnFinalizarCompra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Compra realizada com sucesso, obrigado!",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    // Seta voltar na tolbar
 
     public boolean onOptionsItemSelected(MenuItem menuItem){
 

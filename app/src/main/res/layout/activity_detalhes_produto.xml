@@ -14,10 +14,11 @@
 
         <ImageView
             android:id="@+id/imgProduto"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_width="413dp"
+            android:layout_height="171dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/pet_shop_3" />
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/racao_dog" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,9 +31,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Ração para Gato"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="Ração Pedigree"
+                android:textColor="@color/colorBlack"
                 android:textSize="25sp"
+                android:textStyle="bold"
                 android:typeface="normal" />
         </LinearLayout>
 
@@ -40,9 +42,9 @@
             android:id="@+id/txtPrecoProduto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="R$46,00"
-            android:textColor="@android:color/black"
-            android:textSize="45sp"
+            android:text="R$120,00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="30sp"
             android:gravity="center"/>
 
         <androidx.cardview.widget.CardView
@@ -78,7 +80,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4,1"
+                    android:text="4,8"
                     android:textColor="@color/colorStar"
                     android:textSize="16sp" />
 
@@ -91,7 +93,25 @@
 
             </LinearLayout>
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="406dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="Conteúdo"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+        </LinearLayout>
 
     </LinearLayout>
 
