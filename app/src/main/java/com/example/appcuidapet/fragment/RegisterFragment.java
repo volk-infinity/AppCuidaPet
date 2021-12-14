@@ -116,7 +116,7 @@ public class RegisterFragment extends Fragment {
 
                 if (task.isSuccessful()) {
                     Toast.makeText(getActivity(),
-                            "Sucesso ao cadastrar o usuário",
+                            "Cadastro realizado com sucesso",
                             Toast.LENGTH_LONG).show();
                     getActivity().finish();
 

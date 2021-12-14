@@ -58,18 +58,6 @@ public class Usuario {
 
 
 
-    @Exclude
-    public Map<String, Object> converterParaMap(){
-        HashMap<String, Object> usuarioMap = new HashMap<>();
-
-        usuarioMap.put("email",getEmail());
-        usuarioMap.put("nome", getNome());
-        usuarioMap.put("senha",getSenha());
-
-        return usuarioMap;
-    }
-
-
     public void salvar() {
         DatabaseReference firebaseRef = ConfigFirebase.getFirebaseDatabase();
         DatabaseReference usuario = firebaseRef.child("usuarios").child(getIdUsuario());
