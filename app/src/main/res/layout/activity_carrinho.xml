@@ -52,6 +52,16 @@
                         android:text="Ração Pedigree"
                         android:textColor="@color/colorBlack"
                         android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="51dp"
+                        android:layout_height="39dp"
+                        android:layout_marginLeft="65dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_delete" />
                 </LinearLayout>
 
                 <Button
