@@ -32,6 +32,47 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textAcess1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAcessProduto1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Osso Kong Core"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textAcessPreco1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAcessProduto1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 60,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgAcessProduto1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/acess_dog1" />
+
+                    <ImageView
+                        android:id="@+id/btnAcessFavoritar1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
+
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -44,6 +85,46 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textAcess2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAcessProduto2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Comedouro Inox"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textAcessPreco2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAcessProduto2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 30,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgAcessProduto2"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/acess_dog2" />
+
+                    <ImageView
+                        android:id="@+id/btnAcessFavoritar2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -70,6 +151,46 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textAcess3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAcessProduto3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Guia Retrátil"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textAcessPreco3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAcessProduto3"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 45,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgAcessProduto3"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/acess_dog3" />
+
+                    <ImageView
+                        android:id="@+id/btnAcessFavoritar3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -82,6 +203,46 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textAcess4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAcessProduto4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Peitoral Athletic Fit"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textAcessPreco4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAcessProduto4"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 75,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgAcessProduto4"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/acess_dog4" />
+
+                    <ImageView
+                        android:id="@+id/btnAcessFavoritar4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>

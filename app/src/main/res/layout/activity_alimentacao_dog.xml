@@ -66,7 +66,7 @@
                         app:srcCompat="@drawable/racao_dog" />
 
                     <ImageView
-                        android:id="@+id/btnFavoritar"
+                        android:id="@+id/btnFavoritar1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="140dp"
@@ -86,6 +86,47 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textProduto2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgProduto2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Ração Magnus"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textPreco2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgProduto2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 115,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgProduto2"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/racao_dog2" />
+
+                    <ImageView
+                        android:id="@+id/btnFavoritar2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
+
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -112,6 +153,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textProduto3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgProduto3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Ração Premier"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textPreco3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgProduto3"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 90,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgProduto3"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/racao_dog3" />
+
+                    <ImageView
+                        android:id="@+id/btnFavoritar3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
+
+
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -124,6 +207,47 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textProduto4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgProduto4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Ração Golden"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textPreco4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgProduto4"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 100,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgProduto4"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/racao_dog4" />
+
+                    <ImageView
+                        android:id="@+id/btnFavoritar4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
+
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
