@@ -33,6 +33,47 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+
+                    <TextView
+                        android:id="@+id/textHigiene1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgHigieneProduto1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Tapete Higiênico"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textHigienePreco1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgHigieneProduto1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 21,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgHigieneProduto1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/higiene_dog1" />
+
+                    <ImageView
+                        android:id="@+id/btnHigieneFavoritar1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -45,6 +86,46 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textHigiene2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgHigieneProduto2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Higienizador Bucal"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textHigienePreco2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgHigieneProduto2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 38,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgHigieneProduto2"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/higiene_dog2" />
+
+                    <ImageView
+                        android:id="@+id/btnHigieneFavoritar2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -71,6 +152,46 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textHigiene3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgHigieneProduto3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Shampoo Antipulga"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textHigienePreco3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgHigieneProduto3"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 18,00"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgHigieneProduto3"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/higiene_dog3" />
+
+                    <ImageView
+                        android:id="@+id/btnHigieneFavoritar3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -83,6 +204,46 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textHigiene4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgHigieneProduto4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Shampoo Neutro"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textHigienePreco4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgHigieneProduto4"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:text="R$ 15,90"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <ImageView
+                        android:id="@+id/imgHigieneProduto4"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/higiene_dog4" />
+
+                    <ImageView
+                        android:id="@+id/btnHigieneFavoritar4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="185dp"
+                        app:srcCompat="@drawable/ic_favorite_off" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
