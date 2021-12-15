@@ -86,7 +86,7 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),
                         "Produto adicionado ao carrinho", Toast.LENGTH_LONG).show();
-                
+
             }
         });
     }
