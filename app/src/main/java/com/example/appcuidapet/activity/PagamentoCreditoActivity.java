@@ -81,9 +81,10 @@ public class PagamentoCreditoActivity extends AppCompatActivity {
         btnFinalizarCompra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Compra realizada com sucesso, obrigado!",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),
+                        "Compra realizada com sucesso, obrigado!",Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MaisActivity.class);
                 startActivity(intent);
             }
         });

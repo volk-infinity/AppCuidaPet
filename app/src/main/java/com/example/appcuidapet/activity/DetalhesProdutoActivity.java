@@ -16,6 +16,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
@@ -23,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
 public class DetalhesProdutoActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    private Button btnAddCarinho;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +35,13 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+        btnAddCarinho = findViewById(R.id.btnAddCarinho);
+
+        btnAddCarinho();
+
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.ic_home);
+        bottomNavigationView.setSelectedItemId(R.id.ic_category);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -42,12 +50,12 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.ic_home:
-
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ic_category:
-                        startActivity(new Intent(getApplicationContext(), CategoriaActivity.class));
-                        overridePendingTransition(0, 0);
+
                         return true;
 
                     case R.id.ic_buy:
@@ -71,6 +79,20 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
         });
 
     }
+
+    private void btnAddCarinho() {
+        btnAddCarinho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),
+                        "Produto adicionado ao carrinho", Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

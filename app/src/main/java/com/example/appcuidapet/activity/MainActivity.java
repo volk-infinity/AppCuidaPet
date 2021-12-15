@@ -30,7 +30,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    ImageView imgHome,imgProduto1;
+    ImageView imgHome;
 
 
     @Override
@@ -40,10 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         imgHome = findViewById(R.id.imgHome);
-        imgProduto1 = findViewById(R.id.imgProduto1);
 
         imgHome();
-        imgProduto1();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -111,14 +109,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void imgProduto1() {
-        imgProduto1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), DetalhesProdutoActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
 
 }
